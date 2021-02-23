@@ -1,7 +1,8 @@
 {
   "env": {
       "es6": true,
-      "node": true
+      "node": true,
+      "jest": true
   },
   "extends": [
       "airbnb-base",
@@ -38,11 +39,13 @@
       "error",
       {
         "selector": "interface",
-        "prefix": ["I"],
-        "format": ["PascalCase"]
+        "format": ["PascalCase"],
+        "custom": {
+          "regex": "^I[A-Z]",
+          "match": true
+        }
       }
-    ],
-    "typescript-eslint/interface-name-prefix": ["error", {"prefixWithI": "always"}]
+    ]
   },
   "settings": {
     "import/resolver": {
